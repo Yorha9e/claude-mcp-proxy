@@ -1,0 +1,26 @@
+{
+  "port": 3100,
+  "fallbackPorts": [3101, 3102, 3103],
+  "defaultMode": "user-invocable-only",
+  "cache": {
+    "ttl": 1800000,
+    "perServerMaxTools": 100,
+    "perToolMaxSchemaBytes": 20480,
+    "staleMode": "serve_stale"
+  },
+  "servers": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "tools": {
+        "get_file_contents": "on",
+        "search_code": "on",
+        "create_issue": "off",
+        "merge_pull_request": "off"
+      }
+    }
+  }
+}

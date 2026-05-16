@@ -1,0 +1,7 @@
+{
+  "name": "mcp-proxy",
+  "description": "MCP Proxy with per-tool filtering - sits between Claude Code and MCP servers",
+  "version": "0.1.0",
+  "author": { "name": "Yorha" },
+  "license": "MIT"
+}
